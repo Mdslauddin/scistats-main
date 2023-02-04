@@ -17,14 +17,23 @@ Categories:
 
 
 """
+import math 
 
 __all__ = ['geomean','harmmean','trimean','kurtosis','moment','skewness']
 
-def geomean():
-    pass
-
-def harmmean():
-    pass
+def geomean(x):
+    if type(x) == list:
+        length = len(x)
+        prod = math.prod(x)
+        geom = pow(prod,(1/length))
+        return geom 
+    
+    
+def harmmean(numbers):
+    sum_of_inverses = 0
+    for num in numbers:
+        sum_of_inverses += 1/num
+    return len(numbers) / sum_of_inverses
 
 def trimean():
     pass
