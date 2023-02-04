@@ -26,7 +26,7 @@ def geomean(x):
         length = len(x)
         prod = math.prod(x)
         geom = pow(prod,(1/length))
-        return geom 
+    return geom 
     
     
 def harmmean(numbers):
