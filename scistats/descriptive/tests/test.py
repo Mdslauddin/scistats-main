@@ -64,7 +64,7 @@ def kurtosis(numbers):
     return sum(((x - mean) / std)**4 for x in numbers) / n - 3
 
 
-def central_moment(numbers, k):
+def moment(numbers, k):
     """
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     result = central_moment(numbers, 3)
