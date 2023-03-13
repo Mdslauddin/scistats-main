@@ -28,3 +28,17 @@ class binom:
         """
         std = sqrt(n * p * (1-p))
         return std
+    
+#https://gist.github.com/fabianp/1046959/62dba7b6ce6c3feb3bfe3a09c16a40492f2b7b7d
+
+from math import factorial
+
+def binomial(n, k):
+    """binomial(n, k): return the binomial coefficient (n k)."""
+
+    if k < 0 or k > n:
+        return 0
+    if k == 0 or k == n:
+        return 1
+    return factorial(n) // (factorial(k) * factorial(n-k))
+ 
